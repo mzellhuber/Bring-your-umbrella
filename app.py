@@ -66,19 +66,29 @@ def makeWebhookResult(req):
 				print("bring umbrella")
 
 				return {
-		            "fulfillmentText": "bring umbrella",
-		            "text": "bring umbrella",
-		            "data": {"slack": "", "facebook": "facebook_message"},
-		            "source": ""
-		        }
+						"fulfillmentText": "Umbrella",
+						"payload": {
+						  "facebook": {
+						    "text": "umbrella FB"
+						  },
+						  "slack": {
+						    "text": "umbrella Slack"
+						  }
+						}
+						}
 			else:
 				print("not umbrella")
 				return {
-		            "fulfillmentText": "no umbrella",
-		            "text": "no umbrella",
-		            "data": {"slack": "", "facebook": ""},
-		            "source": ""
-		        }
+						"fulfillmentText": "No Umbrella",
+						"payload": {
+						  "facebook": {
+						    "text": "No umbrella FB"
+						  },
+						  "slack": {
+						    "text": "No umbrella Slack"
+						  }
+						}
+						}
 			#print(condition)
 			#{u'channel': {u'item': {u'condition': {u'text': u'Partly Cloudy'}}}}
 		#print(data['query']['results'])
