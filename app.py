@@ -51,16 +51,35 @@ def makeWebhookResult(req):
 		city = req.get("result").get("parameters").get("geo-city")
 		baseurl = "https://query.yahooapis.com/v1/public/yql?"
 		#yql_query = "select wind from weather.forecast where woeid=2460286"
-		yql_query = 'select item.condition.text from weather.forecast where woeid in (select woeid from geo.places(1) where text="'+city+'")'
+		yql_query = 'select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="'+city+'")'
 		yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
 		result = urllib2.urlopen(yql_url).read()
 		data = json.loads(result)
-		print(data)
-		print(data['query']['results'])
+		#print(data)
+		#print(data['query']['results'])
 
 		if data is not None:
-			condition = data['query']['results']['channel']['item']['condition']['text']
-			print(condition)
+			condition_text = data['query']['results']['channel']['item']['condition']['text']
+			condition_code = data['query']['results']['channel']['item']['condition']['code']
+
+			if condition_code in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,35,37,38,39,40,41,42,43,45,46,47]:
+				print("bring umbrella")
+
+				return {
+		            "speech": "",
+		            "displayText": "bring umbrella",
+		            "data": {"slack": "", "facebook": "facebook_message"},
+		            "source": ""
+		        }
+			else:
+				print("not umbrella")
+				return {
+		            "speech": "",
+		            "displayText": "no umbrella",
+		            "data": {"slack": "", "facebook": ""},
+		            "source": ""
+		        }
+			#print(condition)
 			#{u'channel': {u'item': {u'condition': {u'text': u'Partly Cloudy'}}}}
 		#print(data['query']['results'])
 
