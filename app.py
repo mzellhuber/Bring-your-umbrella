@@ -55,7 +55,12 @@ def makeWebhookResult(req):
 		yql_url = baseurl + urllib.urlencode({'q':yql_query}) + "&format=json"
 		result = urllib2.urlopen(yql_url).read()
 		data = json.loads(result)
-		print(data['query']['results'])
+
+		if results is not None:
+			condition = data['item']['condition']['text']
+			print(condition)
+			#{u'channel': {u'item': {u'condition': {u'text': u'Partly Cloudy'}}}}
+		#print(data['query']['results'])
 
 
 
