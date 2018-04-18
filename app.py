@@ -57,7 +57,7 @@ def makeWebhookResult(req):
 		data = json.loads(result)
 
 		if data is not None:
-			condition = data['item']['condition']['text']
+			condition = data['query']['results']['item']['condition']['text']
 			print(condition)
 			#{u'channel': {u'item': {u'condition': {u'text': u'Partly Cloudy'}}}}
 		#print(data['query']['results'])
