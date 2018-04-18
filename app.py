@@ -56,7 +56,7 @@ def makeWebhookResult(req):
 		result = urllib2.urlopen(yql_url).read()
 		data = json.loads(result)
 
-		if results is not None:
+		if data is not None:
 			condition = data['item']['condition']['text']
 			print(condition)
 			#{u'channel': {u'item': {u'condition': {u'text': u'Partly Cloudy'}}}}
