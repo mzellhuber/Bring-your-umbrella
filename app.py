@@ -47,8 +47,8 @@ def webhook():
 def makeWebhookResult(req):
 	print(req)
 
-	if req.get("result").get("action") == "get-location":
-		city = req.get("result").get("parameters").get("geo-city")
+	if req.get("queryResult").get("action") == "get-location":
+		city = req.get("queryResult").get("parameters").get("geo-city")
 		baseurl = "https://query.yahooapis.com/v1/public/yql?"
 		#yql_query = "select wind from weather.forecast where woeid=2460286"
 		yql_query = 'select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="'+city+'")'
