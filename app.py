@@ -66,7 +66,7 @@ def makeWebhookResult(req):
 				print("bring umbrella")
 
 				return {
-		            "speech": "",
+		            "speech": "bring umbrella",
 		            "displayText": "bring umbrella",
 		            "data": {"slack": "", "facebook": "facebook_message"},
 		            "source": ""
@@ -74,7 +74,7 @@ def makeWebhookResult(req):
 			else:
 				print("not umbrella")
 				return {
-		            "speech": "",
+		            "speech": "no umbrella",
 		            "displayText": "no umbrella",
 		            "data": {"slack": "", "facebook": ""},
 		            "source": ""
