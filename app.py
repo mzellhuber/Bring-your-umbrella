@@ -61,33 +61,37 @@ def makeWebhookResult(req):
 		if data is not None:
 			condition_text = data['query']['results']['channel']['item']['condition']['text']
 			condition_code = data['query']['results']['channel']['item']['condition']['code']
-			print(condition_text)
-			print(condition_code)
+			#print(condition_text)
+			#print(condition_code)
 
 			if int(condition_code) in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,35,37,38,39,40,41,42,43,45,46,47]:
-				print("bring umbrella")
+				#print("bring umbrella")
+
+				text = "It looks like the weather is "+condition_text+". You should bring an umbrella. ☔️"
 
 				return {
-						"fulfillmentText": "Umbrella",
+						"fulfillmentText": text,
 						"payload": {
 						  "facebook": {
-						    "text": "umbrella FB"
+						    "text": text
 						  },
 						  "slack": {
-						    "text": "umbrella Slack"
+						    "text": text
 						  }
 						}
 						}
 			else:
-				print("not umbrella")
+				#print("not umbrella")
+				text = "It looks like the weather is "+condition_text+". You don't need an umbrella."
+
 				return {
-						"fulfillmentText": "No Umbrella",
+						"fulfillmentText": text,
 						"payload": {
 						  "facebook": {
-						    "text": "No umbrella FB"
+						    "text": text
 						  },
 						  "slack": {
-						    "text": "No umbrella Slack"
+						    "text": text
 						  }
 						}
 						}
