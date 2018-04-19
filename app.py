@@ -71,7 +71,7 @@ def makeWebhookResult(req):
 				umbrella = "🌧"
 				umbrella = umbrella.decode('utf-8')
 
-				text = "It looks like the weather for "+city+" is "+condition_text+". You should bring an umbrella."
+				text = "It looks like the weather for "+city+" is "+condition_text+". You should bring an umbrella."+umbrella
 
 				return {
 						"fulfillmentText": text,
