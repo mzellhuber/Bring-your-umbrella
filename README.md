@@ -15,9 +15,9 @@ TO-DO
 
 ## Example
 
-![image1](./img/1.png)
-![image2](./img/2.png)
-![image3](./img/3.png)
+![image1](/img/1.PNG)
+![image2](/img/2.PNG)
+![image3](/img/3.PNG)
 
 ## Contents
 
