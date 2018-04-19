@@ -15,20 +15,24 @@ TO-DO
 
 ## Example
 
+<p align="center">
+
 ![image1](/img/1.PNG)
 ![image2](/img/2.PNG)
 ![image3](/img/3.PNG)
 
+</p>
+
 ## Contents
 
-– app.json
-	Contains simple information like the project title, description, logo, repository and keywords
-– app.py
-	The Python code for the app
-– Procfile
-	Tells Heroku the type of the app and where the main file is
-– requirements.txt
-	Contains all the packages required for Python to execute the app correctly
+– app.json<br />
+	Contains simple information like the project title, description, logo, repository and keywords<br />
+– app.py<br />
+	The Python code for the app<br />
+– Procfile<br />
+	Tells Heroku the type of the app and where the main file is<br />
+– requirements.txt<br />
+	Contains all the packages required for Python to execute the app correctly<br />
 
 
 ## Built With
