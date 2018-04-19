@@ -69,7 +69,7 @@ def makeWebhookResult(req):
 			if int(condition_code) in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,35,37,38,39,40,41,42,43,45,46,47]:
 				#print("bring umbrella")
 
-				text = "It looks like the weather is "+condition_text+". You should bring an umbrella."
+				text = "It looks like the weather for "+city+" is "+condition_text+"🌧. You should bring an umbrella."
 
 				return {
 						"fulfillmentText": text,
@@ -84,7 +84,7 @@ def makeWebhookResult(req):
 						}
 			else:
 				#print("not umbrella")
-				text = "It looks like the weather is "+condition_text+". You don't need an umbrella."
+				text = "It looks like the weather for "+city+" is "+condition_text+". You don't need an umbrella."
 
 				return {
 						"fulfillmentText": text,
