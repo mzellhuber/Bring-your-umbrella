@@ -2,8 +2,22 @@
 
 
 ## Description
+Bring your umbrella is a chatbot that tells you if you need to bring an umbrella today.
+
+It lives here [BringYourUmbrella](https://www.messenger.com/t/bringyourumbrella)
+
+TO-DO
+* Slack integration
+* Telegram integration
+* Add daily or weekly notifications to remind you if you need an umbrella
+* Add notifications only when it's raining
 
 
+## Example
+
+![image1](./img/1.png)
+![image2](./img/2.png)
+![image3](./img/3.png)
 
 ## Contents
 
@@ -22,6 +36,9 @@
 * [Heroku](https://www.heroku.com/) 
 * [Flask](http://flask.pocoo.org/) 
 * [Dialogflow](https://dialogflow.com) 
-* [PostgreSQL](https://www.postgresql.org/) 
 * [Slack](https://slack.com/) 
 * [Facebook Messenger](https://www.messenger.com/) 
+
+## Author
+
+* ✨✨Melissa Zellhuber✨✨[https://github.com/mzellhuber](https://github.com/mzellhuber)

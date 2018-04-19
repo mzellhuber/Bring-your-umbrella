@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Bring your Umbrella",
+  "description": "Simple bot that tells you if you will need to bring your umbrella.",
   "repository": "",
   "logo": "",
   "keywords": ["api.ai", "natural language", "chatbot", "social bot", "weather"]
